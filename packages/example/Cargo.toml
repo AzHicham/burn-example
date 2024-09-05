@@ -1,0 +1,13 @@
+[package]
+name = "burn-example"
+version = "0.1.0"
+edition = "2021"
+build = "build.rs"
+
+[dependencies]
+burn = { workspace = true, features = ["candle", "cuda-jit", "ndarray", "tch"] }
+
+[build-dependencies]
+burn-import = { workspace = true, features = [] }
+burn = { workspace = true, features = [] }
+core = { path = "../core" }
